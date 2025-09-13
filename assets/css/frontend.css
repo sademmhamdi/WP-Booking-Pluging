@@ -1,0 +1,153 @@
+#simple-booking-form-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    border: 1px solid #e1e8ed;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+#simple-booking-form-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #007cba, #005a87, #007cba);
+    background-size: 200% 100%;
+    animation: gradientShift 3s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+#simple-booking-form h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+    font-size: 24px;
+    font-weight: 300;
+}
+
+#simple-booking-form p {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+#simple-booking-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+#simple-booking-form input,
+#simple-booking-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e1e8ed;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    background: rgba(255,255,255,0.8);
+}
+
+#simple-booking-form input:focus,
+#simple-booking-form textarea:focus {
+    border-color: #007cba;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0,124,186,0.1);
+    background: #fff;
+    transform: translateY(-2px);
+}
+
+#simple-booking-form textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+#simple-booking-form button {
+    background: linear-gradient(135deg, #007cba 0%, #005a87 100%);
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+}
+
+#simple-booking-form button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+#simple-booking-form button:hover::before {
+    left: 100%;
+}
+
+#simple-booking-form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0,124,186,0.3);
+}
+
+#simple-booking-message {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+    position: relative;
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#simple-booking-message p {
+    margin: 0;
+    font-size: 16px;
+}
+
+#simple-booking-message.success {
+    background: linear-gradient(135deg, #d4edda, #c3e6cb);
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+#simple-booking-message.error {
+    background: linear-gradient(135deg, #f8d7da, #f5c6cb);
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}

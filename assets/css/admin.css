@@ -1,0 +1,240 @@
+body.wp-admin .kanban-board {
+    display: flex !important;
+    gap: 20px !important;
+    margin-top: 20px !important;
+    padding: 20px !important;
+    background: #f8f9fa !important;
+    border-radius: 12px !important;
+}
+
+body.wp-admin .kanban-column {
+    flex: 1 !important;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%) !important;
+    padding: 20px !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1) !important;
+    border: 1px solid #e9ecef !important;
+    min-height: 400px !important;
+}
+
+body.wp-admin .kanban-column h3 {
+    margin-top: 0 !important;
+    margin-bottom: 15px !important;
+    color: #495057 !important;
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    text-align: center !important;
+    padding: 10px !important;
+    background: linear-gradient(135deg, #007cba, #005a87) !important;
+    color: white !important;
+    border-radius: 8px !important;
+}
+
+body.wp-admin .kanban-cards {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 15px !important;
+}
+
+body.wp-admin .kanban-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%) !important;
+    padding: 15px !important;
+    border: 1px solid #dee2e6 !important;
+    border-radius: 8px !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+body.wp-admin .kanban-card::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 4px !important;
+    height: 100% !important;
+    background: #007cba !important;
+}
+
+body.wp-admin .kanban-card:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15) !important;
+    border-color: #007cba !important;
+}
+
+body.wp-admin .kanban-card p {
+    margin: 8px 0 !important;
+    font-size: 14px !important;
+    color: #495057 !important;
+}
+
+body.wp-admin .kanban-card p:first-child {
+    font-weight: 600 !important;
+    color: #212529 !important;
+    font-size: 16px !important;
+}
+
+body.wp-admin .kanban-card .button {
+    margin-right: 5px !important;
+    padding: 5px 10px !important;
+    font-size: 12px !important;
+    border-radius: 4px !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+    transition: all 0.3s ease !important;
+}
+
+body.wp-admin .kanban-card .button-primary {
+    background: #007cba !important;
+    color: white !important;
+}
+
+body.wp-admin .kanban-card .button-primary:hover {
+    background: #005a87 !important;
+    transform: scale(1.05) !important;
+}
+
+body.wp-admin .kanban-card .button-secondary {
+    background: #dc3545 !important;
+    color: white !important;
+}
+
+body.wp-admin .kanban-card .button-secondary:hover {
+    background: #c82333 !important;
+    transform: scale(1.05) !important;
+}
+
+body.wp-admin .modal {
+    position: fixed !important;
+    z-index: 10000 !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background-color: rgba(0,0,0,0.6) !important;
+    backdrop-filter: blur(5px) !important;
+}
+
+body.wp-admin .modal-content {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%) !important;
+    margin: 10% auto !important;
+    padding: 30px !important;
+    border: 1px solid #dee2e6 !important;
+    border-radius: 12px !important;
+    width: 90% !important;
+    max-width: 500px !important;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2) !important;
+    animation: modalSlideIn 0.3s ease-out !important;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0 !important;
+        transform: scale(0.9) translateY(-20px) !important;
+    }
+    to {
+        opacity: 1 !important;
+        transform: scale(1) translateY(0) !important;
+    }
+}
+
+body.wp-admin .close {
+    color: #6c757d !important;
+    float: right !important;
+    font-size: 28px !important;
+    font-weight: bold !important;
+    cursor: pointer !important;
+    transition: color 0.3s ease !important;
+}
+
+body.wp-admin .close:hover {
+    color: #495057 !important;
+}
+
+/* List Table Styles */
+body.wp-admin .wp-list-table {
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+    background: #fff !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1) !important;
+}
+
+body.wp-admin .wp-list-table th {
+    background: linear-gradient(135deg, #007cba, #005a87) !important;
+    color: white !important;
+    padding: 15px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    border: none !important;
+}
+
+body.wp-admin .wp-list-table td {
+    padding: 15px !important;
+    border-bottom: 1px solid #e9ecef !important;
+    transition: background 0.3s ease !important;
+}
+
+body.wp-admin .wp-list-table tr:hover td {
+    background: #f8f9fa !important;
+}
+
+body.wp-admin .wp-list-table .column-actions a {
+    margin-right: 5px !important;
+    padding: 5px 10px !important;
+    text-decoration: none !important;
+    border-radius: 4px !important;
+    font-size: 12px !important;
+    transition: all 0.3s ease !important;
+}
+
+body.wp-admin .wp-list-table .column-actions .approve {
+    background: #28a745 !important;
+    color: white !important;
+}
+
+body.wp-admin .wp-list-table .column-actions .approve:hover {
+    background: #218838 !important;
+    transform: scale(1.05) !important;
+}
+
+body.wp-admin .wp-list-table .column-actions .decline {
+    background: #ffc107 !important;
+    color: #212529 !important;
+}
+
+body.wp-admin .wp-list-table .column-actions .decline:hover {
+    background: #e0a800 !important;
+    transform: scale(1.05) !important;
+}
+
+body.wp-admin .wp-list-table .column-actions .delete {
+    background: #dc3545 !important;
+    color: white !important;
+}
+
+body.wp-admin .wp-list-table .column-actions .delete:hover {
+    background: #c82333 !important;
+    transform: scale(1.05) !important;
+}
+
+body.wp-admin .tablenav {
+    margin: 20px 0 !important;
+}
+
+body.wp-admin .tablenav .button {
+    background: #007cba !important;
+    color: white !important;
+    border: none !important;
+    padding: 8px 16px !important;
+    border-radius: 4px !important;
+    transition: background 0.3s ease !important;
+}
+
+body.wp-admin .tablenav .button:hover {
+    background: #005a87 !important;
+}
